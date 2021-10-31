@@ -1,0 +1,114 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital@1&display=swap');
+
+:root {
+  --bgcolor: linear-gradient(
+    119.02deg,
+    #e7dcff -0.35%,
+    rgba(255, 234, 203, 0.869792) 57.14%,
+    #f6f1ff 100%
+  );
+  --btn-color-hover: linear-gradient(90.41deg, #fa3967 0.35%, #fa9639 98.37%);
+  /* --btn-color: linear-gradient(#ffedd2, #ffedd2); */
+  --btn-color: #ffedd2;
+  --img-cont-bg: rgba(246, 242, 255, 0.5);
+  --cardcolor: white;
+  --img-radius: 20px;
+  --img-cont-radius: 30px;
+  --btn-radius: 35px;
+  --card-radius: 40px;
+  --img-shadow: 0px 19px 25px -15px rgba(59, 33, 119, 0.32);
+  --card-shadow: 0px 43px 50px -25px rgba(34, 0, 111, 0.17);
+  --card-shadow-2: 0px 86px 100px -25px rgba(34, 0, 111, 0.17);
+  --transition: 0.3s ease-in-out all;
+}
+
+body {
+  background: var(--bgcolor);
+}
+
+.section-center {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-card {
+  background-color: var(--cardcolor);
+  padding: 2rem;
+  border-radius: var(--card-radius);
+  box-shadow: var(--card-shadow);
+  transition: var(--transition);
+  display: grid;
+  place-items: center;
+  height: 25rem;
+  width: 25rem;
+}
+
+.profile-card:hover {
+  box-shadow: var(--card-shadow-2);
+}
+
+.img-container {
+  padding: 1rem;
+  border-radius: var(--img-cont-radius);
+  background-color: var(--img-cont-bg);
+  margin-bottom: 0.5rem;
+}
+
+.user-img {
+  height: 6rem;
+  width: 6rem;
+  background-image: url('./user.jpg');
+  background-size: cover;
+  border-radius: var(--img-radius);
+  box-shadow: var(--img-shadow);
+}
+
+.user-name {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.user-desc {
+  width: 12rem;
+  text-align: center;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  margin-top: -0.8rem;
+  margin-bottom: 1.2rem;
+}
+
+.btn {
+  border-radius: var(--btn-radius);
+  background: var(--btn-color);
+  border: none;
+  margin: 0 0.5rem;
+  height: 2.5rem;
+  width: 9rem;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.btn-follow {
+  background: var(--btn-color-hover);
+}
+
+.btn:hover {
+  background: var(--btn-color-hover);
+}
+
+.btn-text {
+  margin-left: 0.2rem;
+}
