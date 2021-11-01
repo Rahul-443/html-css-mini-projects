@@ -1,0 +1,130 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+/* google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Mulish&display=swap');
+
+html {
+  font-size: 100%;
+}
+
+:root {
+  /* colors */
+  --background: #f2f2f2;
+  --card-bg: white;
+  --underline-bg: #edf0f8;
+
+  /* font colors */
+  --font-color-1: #192332;
+  --font-color-2: #5d6877;
+
+  /* fonts */
+  --mulish: 'Mulish', sans-serif;
+
+  /* shadows */
+  --card-shadow-1: 0px 13px 40px -20px #89a0db;
+  --card-shadow-2: 0px 15px 102px rgba(137, 160, 219, 0.547124);
+
+  /* rest vars */
+  --card-border-radius-1: 10px;
+}
+
+body {
+  background: var(--background);
+  display: flex;
+  width: 100vw;
+  height: 75vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.item {
+  height: 8rem;
+  width: 10rem;
+  display: grid;
+  place-items: center;
+  background: var(--card-bg);
+  border-radius: var(--card-border-radius-1);
+  box-shadow: var(--card-shadow-1);
+  margin-bottom: 1rem;
+  padding: 1rem;
+}
+
+.item img {
+  height: 2rem;
+  margin: 0.6rem;
+}
+
+.item h4 {
+  margin: 0;
+  margin-top: 0.5rem;
+  font-family: var(--mulish);
+  color: var(--font-color-1);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.underline {
+  height: 0.1rem;
+  width: 8rem;
+  margin-top: 1rem;
+  background: var(--underline-bg);
+}
+
+.item-details {
+  background: var(--card-bg);
+  padding: 2rem;
+  width: 30rem;
+  box-shadow: var(--card-shadow-2);
+  border-radius: var(--card-border-radius-1);
+}
+
+.triangle-pointer {
+  height: 1rem;
+  width: 1rem;
+  background: var(--card-bg);
+  margin-top: -2.5rem;
+  margin-left: 3rem;
+  transform: rotateZ(45deg);
+  border-radius: 0.2rem;
+}
+
+.item-details h3 {
+  margin: 0;
+  margin-top: 1rem;
+  font-family: var(--mulish);
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--font-color-1);
+}
+
+.item-details p {
+  margin-top: 0.6rem;
+  margin-bottom: 1.4rem;
+  font-family: var(--mulish);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--font-color-2);
+}
+
+.action-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+a {
+  text-decoration: none;
+  font-family: var(--mulish);
+  color: var(--font-color-1);
+  font-size: 12px;
+  margin-top: 0.4rem;
+}
+
+a:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--font-color-1);
+}
