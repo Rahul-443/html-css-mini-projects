@@ -19,6 +19,8 @@ html {
   --cream-2: #f6f0e8;
   --cream-3: #fffcf8;
 
+  --cream-2-D10: #ddd8d1;
+
   --dark-blue-1-A2: rgba(20, 32, 62, 0.2);
   --dark-blue-2-A2-4: rgba(20, 32, 62, 0.24);
 
@@ -32,6 +34,9 @@ html {
   --font-size-1: 0.92rem;
   --font-size-2: 1.1rem;
   --font-size-3: 2.8rem;
+
+  /* transitions */
+  --transition-1: all 0.3s linear;
 }
 
 body {
@@ -41,12 +46,19 @@ body {
 }
 
 .button {
+  border: 1px solid var(--dark-blue-1);
   border-radius: var(--border-radius-1);
   padding: 0.4rem 1rem;
   background-color: var(--dark-blue-1);
   font-size: var(--font-size-1);
   margin: 0 0.45rem;
   font-weight: normal;
+}
+
+.button:hover {
+  background-color: transparent;
+  color: var(--dark-blue-1);
+  transition: var(--transition-1);
 }
 
 nav {
@@ -106,11 +118,21 @@ nav {
 .button.login {
   background-color: var(--cream-2);
   color: var(--black);
+  border: 1px solid var(--cream-2);
+}
+
+.button.login:hover {
+  border: 1px solid var(--cream-2-D10);
+  background-color: transparent;
 }
 
 .button.sign-up {
   color: var(--white);
   margin-right: 2rem;
+}
+
+.button.sign-up:hover {
+  color: var(--dark-blue-1);
 }
 
 main {
