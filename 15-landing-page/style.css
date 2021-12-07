@@ -1,0 +1,257 @@
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+}
+
+:root {
+  /* colors */
+  --dark-blue-1: #14203e;
+  --white: #ffffff;
+  --black: #000000;
+  --cream-1: #f4e8d8;
+  --cream-2: #f6f0e8;
+  --cream-3: #fffcf8;
+
+  --cream-2-D10: #ddd8d1;
+
+  --dark-blue-1-A2: rgba(20, 32, 62, 0.2);
+  --dark-blue-2-A2-4: rgba(20, 32, 62, 0.24);
+
+  /* border */
+  --border-radius-1: 10px;
+
+  /* fonts */
+  --font-family-1: 'IBM Plex Sans', sans-serif;
+
+  --font-size-05: 0.8rem;
+  --font-size-1: 0.92rem;
+  --font-size-2: 1.1rem;
+  --font-size-3: 2.8rem;
+
+  /* transitions */
+  --transition-1: all 0.3s linear;
+}
+
+body {
+  background-color: var(--cream-3);
+  color: var(--dark-blue-1);
+  font-family: var(--font-family-1);
+}
+
+.button {
+  border: 1px solid var(--dark-blue-1);
+  border-radius: var(--border-radius-1);
+  padding: 0.4rem 1rem;
+  background-color: var(--dark-blue-1);
+  font-size: var(--font-size-1);
+  margin: 0 0.45rem;
+  font-weight: normal;
+}
+
+.button:hover {
+  background-color: transparent;
+  color: var(--dark-blue-1);
+  transition: var(--transition-1);
+}
+
+nav {
+  background-color: var(--white);
+  border-bottom: 1px solid var(--cream-1);
+  text-transform: capitalize;
+}
+
+.top-links-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  height: calc(8vh - 1px);
+}
+
+.top-link {
+  width: 33.3333vw;
+}
+
+.top-link > a {
+  text-decoration: none;
+  color: var(--dark-blue-1);
+}
+
+.nav-links-container {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+
+.nav-link > a {
+  text-decoration: none;
+  color: var(--dark-blue-1);
+  font-size: var(--font-size-1);
+  font-weight: normal;
+}
+
+.sign-links-container {
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+}
+
+.sign-link > a {
+  text-decoration: none;
+}
+
+#nav-logo {
+  margin: 0 2rem;
+  text-transform: uppercase;
+  color: var(--dark-blue-2-A2-4);
+  font-size: var(--font-size-2);
+  font-weight: bold;
+}
+
+.button.login {
+  background-color: var(--cream-2);
+  color: var(--black);
+  border: 1px solid var(--cream-2);
+}
+
+.button.login:hover {
+  border: 1px solid var(--cream-2-D10);
+  background-color: transparent;
+}
+
+.button.sign-up {
+  color: var(--white);
+  margin-right: 2rem;
+}
+
+.button.sign-up:hover {
+  color: var(--dark-blue-1);
+}
+
+main {
+  text-align: center;
+  display: grid;
+  place-items: center;
+}
+
+.hero {
+  height: 50vh;
+  width: 50vw;
+  display: grid;
+  place-items: center;
+}
+
+.hero-content > h1 {
+  font-size: var(--font-size-3);
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+.hero-content > h1::first-letter {
+  text-transform: uppercase;
+}
+
+.hero-content p {
+  font-size: var(--font-size-2);
+  font-weight: 500;
+  margin-top: 1.2rem;
+  margin-bottom: 3.6rem;
+}
+
+.hero-sign-up {
+  text-decoration: none;
+  padding: 1.2rem 2.2rem;
+  font-size: var(--font-size-1);
+  font-weight: normal;
+  color: var(--white);
+  margin-bottom: 1rem;
+}
+
+.articles {
+  width: 76vw;
+  margin: 0 auto;
+  padding: 1rem;
+  background-color: var(--white);
+}
+
+.articles > p {
+  font-size: var(--font-size-05);
+  margin: 0.5rem;
+  font-weight: 600;
+}
+
+.articles > p::before {
+  content: '';
+  height: 1px;
+  display: inline-block;
+  width: 12rem;
+  vertical-align: middle;
+  margin-right: 1rem;
+  background-color: var(--dark-blue-1-A2);
+}
+
+.articles > p::after {
+  content: '';
+  height: 1px;
+  width: 12rem;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 1rem;
+  background-color: var(--dark-blue-1-A2);
+}
+
+.article-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.hero-article {
+  height: 100%;
+  width: 50%;
+  margin: 1rem;
+  text-align: left;
+}
+
+.article-img-1 {
+  background: url('./imgs/article1.jpg');
+}
+
+.article-img-2 {
+  background: url('./imgs/article2.jpg');
+}
+
+.article-img-3 {
+  background: url('./imgs/article3.jpg');
+}
+
+.article-img-4 {
+  background: url('./imgs/article4.jpg');
+}
+
+.hero-article img {
+  height: 24vh;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.hero-article .article-title {
+  font-size: var(--font-size-2);
+  font-weight: bold;
+  margin: 1rem 0;
+}
+
+.hero-article .date {
+  font-size: var(--font-size-05);
+  font-weight: normal;
+  text-align: bottom;
+}

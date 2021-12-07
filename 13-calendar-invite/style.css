@@ -1,0 +1,179 @@
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+}
+
+:root {
+  /* colors */
+  --background-color: #f5f9fe;
+  --card-color: white;
+  --month-background: #be3bec;
+  --color-green-1: #33923c;
+
+  /* border color */
+  --border-1: 1px solid #dde7f3;
+
+  /* font */
+  --font-color-1: #000;
+  --font-color-2: white;
+  --font-family-1: 'IBM Plex Sans', sans-serif;
+  --font-family-2: 'Merriweather', serif;
+  --font-family-3: 'IBM Plex Mono', monospace;
+
+  /* border radius */
+  --border-radius-1: 15px;
+  --border-radius-2: 5px;
+  --border-radius-3: 23px;
+
+  /* shadows */
+  --shadow-1: 0px 34px 25px -16px rgba(9, 71, 150, 0.11);
+
+  /* transition */
+  --transition-1: all 0.3s ease-in-out;
+}
+
+body {
+  background-color: var(--background-color);
+  font-family: var(--font-family-1);
+  font-weight: 500;
+}
+
+.section-center {
+  display: grid;
+  height: 100vh;
+  place-items: center;
+}
+
+.card-center {
+  display: grid;
+  height: 100vh;
+  place-items: center;
+}
+
+.invite-card {
+  background-color: var(--card-color);
+  display: flex;
+  justify-content: center;
+  padding: 4rem;
+  border-radius: var(--border-radius-1);
+  box-shadow: var(--shadow-1);
+}
+
+.date {
+  min-width: 7rem;
+  max-height: 7rem;
+  text-align: center;
+  border: var(--border-1);
+  border-radius: var(--border-radius-2);
+  font-family: var(--font-family-3);
+  text-transform: capitalize;
+}
+
+.date h2 {
+  font-size: 1.6rem;
+}
+
+.date p {
+  font-size: 0.9rem;
+}
+
+.month {
+  background: var(--month-background);
+  color: var(--font-color-2);
+  border-top-right-radius: var(--border-radius-2);
+  border-top-left-radius: var(--border-radius-2);
+  padding: 0.3rem;
+  margin-bottom: 0.5rem;
+  display: grid;
+  text-transform: uppercase;
+  place-items: center;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.invite {
+  display: grid;
+  gap: 1.8rem;
+  margin: 0 2.5rem;
+}
+
+.invite-details {
+  display: grid;
+  gap: 1rem;
+}
+
+.invite-details h2 {
+  text-transform: capitalize;
+  font-family: var(--font-family-2);
+  font-weight: 900;
+  font-size: 1.6rem;
+}
+
+.time {
+  display: flex;
+}
+
+.time i {
+  margin-right: 0.4rem;
+}
+
+.time p {
+  font-weight: 500;
+  font-size: 0.8rem;
+}
+
+.invitees button {
+  background: transparent;
+  border: var(--border-1);
+  border-radius: var(--border-radius-3);
+  padding: 0.2rem 0.6rem;
+  text-transform: capitalize;
+  font-size: 0.8rem;
+  font-weight: 500;
+  font-family: var(--font-family-1);
+}
+
+.invite-response {
+  display: grid;
+  gap: 0.5rem;
+  text-transform: capitalize;
+}
+
+.invite-response h3 {
+  font-size: 0.9rem;
+}
+
+.btn-resp-grp {
+  margin-top: 0.5rem;
+}
+
+.btn-resp-grp button {
+  background: transparent;
+  padding: 1rem;
+  border: var(--border-1);
+  border-radius: var(--border-radius-2);
+  min-width: 4.5rem;
+  margin-right: 0.5rem;
+  text-transform: capitalize;
+  font-family: var(--font-family-1);
+  transition: var(--transition-1);
+}
+
+.btn-resp-grp button:hover {
+  background: var(--color-green-1);
+  color: var(--font-color-2);
+}
+
+.link {
+  margin-top: 0.5rem;
+  color: var(--font-color-1);
+  font-size: 0.8rem;
+  text-transform: capitalize;
+}
